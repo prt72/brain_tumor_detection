@@ -3,6 +3,7 @@ import base64
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import img_to_array
+import torch
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
@@ -21,7 +22,7 @@ def get_base64_image(path):
         data = f.read()
     return base64.b64encode(data).decode()
 
-bg_image = get_base64_image(r"C:\Users\debbi\OneDrive - UOW Malaysia KDU\2025 Jan\Image Processing & Computer Vision\Balpreet_Debbie_IPCV\bgimage.jpg")
+bg_image = get_base64_image("bgimage.jpg")
 
 # --- Enhanced CSS Styling ---
 STYLE = f"""
@@ -146,7 +147,7 @@ def load_resnet_model(path='brain_tumor_resnet.h5'):
         return None
 
 @st.cache_resource(show_spinner=False)
-def load_yolo_model(path='runs/detect/yolov11_m2/weights/best.pt'):
+def load_yolo_model(path='best.pt'):
     try:
         return YOLO(path)
     except Exception as e:
