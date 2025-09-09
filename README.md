@@ -12,16 +12,14 @@ It focuses on detecting and classifying brain tumors from MRI images using deep 
 ## 📸 Screenshots & Results
 
 **Input MRI Sample:**
-
-![Input MRI](https://i.imgur.com/z3ZpBze.png)
+(https://i.imgur.com/z3ZpBze.png)
 
 **ResNet Model Architecture:**
-
-![Architecture](https://i.imgur.com/rhtq6Q2.png)
+(https://i.imgur.com/rhtq6Q2.png)
 
 **Training Progress:**
 
-![Training Graph](https://i.imgur.com/ngpPZpN.png)
+![](https://i.imgur.com/ngpPZpN.png)
 
 **Classification Output:**
 
